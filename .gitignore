@@ -4,6 +4,7 @@
 .env.dev
 .env.prod
 .setup.txt
+docker-compose.yml
 
 # folders 
 _
