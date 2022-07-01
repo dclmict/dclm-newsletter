@@ -1,7 +1,9 @@
 # delicate 
-**/.DS_Store 
-.env 
-.setup.txt 
+**/.DS_Store
+.env
+.env.dev
+.env.prod
+.setup.txt
 
 # folders 
 _

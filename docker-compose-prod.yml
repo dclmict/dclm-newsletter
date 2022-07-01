@@ -4,7 +4,6 @@ services:
   # Newsletter Service
   newsletter-app:
     container_name: newsletter-app
-    #image: wordpress:php8.1-fpm
     image: bitnami/wordpress-nginx
     environment:
       WORDPRESS_USERNAME: ${WORDPRESS_USERNAME}
@@ -42,17 +41,11 @@ services:
       - 1003:8080
     networks:
       - newsletter
-      - mariadb
     volumes:
       #- ./.docker/nginx/newsletter.conf:/etc/nginx/sites-available/default.conf
-      - ~/dev/data/docker/dclm_newsletter:/bitnami/wordpress
+      - /var/docker/dclm-newsletter/data:/bitnami/wordpress
     restart: always
 
 networks:
   newsletter:
     name: newsletter
-  mariadb:
-    name: mariadb
-
-# volumes:
-#   newsletter_data: {}
