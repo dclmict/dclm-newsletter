@@ -70,6 +70,3 @@ networks:
     name: newsletter
   mariadb:
     name: mariadb
-
-# volumes:
-#   newsletter_data: {}
