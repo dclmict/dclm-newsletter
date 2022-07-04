@@ -61,7 +61,7 @@ services:
       - newsletter
     volumes:
       #- ./.docker/nginx/newsletter.conf:/etc/nginx/sites-available/default.conf
-      - /var/docker/dclm-newsletter/data:/bitnami/wordpress
+      - ./data:/bitnami/wordpress
       - /var/docker/ssl/rds:/bitnami/ssl
     restart: always
 
