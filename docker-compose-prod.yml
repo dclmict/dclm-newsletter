@@ -70,10 +70,13 @@ services:
       - newsletter
     volumes:
       #- ./.docker/nginx/newsletter.conf:/etc/nginx/sites-available/default.conf
-      - ./data-prod:/bitnami/wordpress
+      - newsletter_data:/bitnami/wordpress
       - /var/docker/ssl/rds:/opt/bitnami/ssl
     restart: always
 
 networks:
   newsletter:
     name: newsletter
+
+volumes:
+  newsletter_data:
