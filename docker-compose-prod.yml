@@ -4,8 +4,9 @@ services:
   # Newsletter Service
   newsletter-app:
     container_name: newsletter-app
+    image: bitnami/wordpress
     #image: bitnami/wordpress-nginx
-    image: opeoniye/wordpress-nginx
+    #image: opeoniye/wordpress-nginx
     #user: ubuntu
     environment:
       WORDPRESS_USERNAME: ${WORDPRESS_USERNAME}
