@@ -5,6 +5,7 @@ services:
   newsletter-app:
     container_name: newsletter-app
     image: bitnami/wordpress-nginx
+    user: ubuntu
     environment:
       WORDPRESS_USERNAME: ${WORDPRESS_USERNAME}
       WORDPRESS_PASSWORD: ${WORDPRESS_PASSWORD}
