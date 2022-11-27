@@ -66,9 +66,9 @@ services:
       WORDPRESS_LOGGED_IN_SALT: ${WORDPRESS_LOGGED_IN_SALT}
       WORDPRESS_NONCE_SALT: ${WORDPRESS_NONCE_SALT}
     ports:
-      - 1003:8080
+      - 1003:80
     networks:
-      - newsletter
+      - bams
     volumes:
       #- ./.docker/nginx/newsletter.conf:/etc/nginx/sites-available/default.conf
       - newsletter_data:/bitnami/wordpress
@@ -76,8 +76,9 @@ services:
     restart: always
 
 networks:
-  newsletter:
-    name: newsletter
+  bams:
+    name: bams-dev
+    external: true 
 
 volumes:
   newsletter_data:

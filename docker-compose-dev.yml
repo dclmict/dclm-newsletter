@@ -63,17 +63,15 @@ services:
       # WORDPRESS_LOGGED_IN_SALT: ${WORDPRESS_LOGGED_IN_SALT}
       # WORDPRESS_NONCE_SALT: ${WORDPRESS_NONCE_SALT}
     ports:
-      - 1003:8080
+      - 1003:80
     networks:
-      - newsletter
-      - mariadb
+      - bams
     volumes:
       - ./data:/bitnami/wordpress
       - ~/dev/keys/aws/rds:/bitnami/ssl
     restart: always
 
 networks:
-  newsletter:
-    name: newsletter
-  mariadb:
-    name: mariadb
+  bams:
+    name: bams-dev
+    external: true 
